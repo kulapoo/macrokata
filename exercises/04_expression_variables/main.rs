@@ -7,6 +7,15 @@ fn print_result(num: i32) {
 // TODO: create `math!()` macro.
 
 ////////// DO NOT CHANGE BELOW HERE /////////
+macro_rules! math {
+    ($lhs: expr, plus, $rhs: expr) => {
+        $lhs + $rhs
+    };
+    (square $arg: expr) => {
+        $arg * $arg
+    };
+}
+
 
 fn main() {
     let var = 5;
