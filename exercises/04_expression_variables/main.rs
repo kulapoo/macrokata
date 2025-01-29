@@ -13,7 +13,7 @@ macro_rules! math {
     };
     (square $arg: expr) => {
         $arg * $arg
-    };
+    }
 }
 
 
