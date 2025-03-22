@@ -8,33 +8,6 @@ fn print_vec<V: std::fmt::Debug>(vec: &Vec<V>) {
 
 ////////// DO NOT CHANGE BELOW HERE /////////
 
-macro_rules! graph {
-    (
-        $(
-            $key: literal->  (
-                $($val: expr),* // "literal" much simpler
-            );
-        )
-        *
-    ) => {
-
-        {
-            let mut vec = Vec::new();
-            $(
-                $(
-                    vec.push((
-                        $key,
-                        $val
-                    ));
-                )*
-            )*
-
-            vec
-        }
-
-    };
-}
-
 #[allow(clippy::vec_init_then_push)]
 fn main() {
     let my_graph = graph!(
